@@ -97,7 +97,3 @@ function onListening() {
   const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   debug("Listening on " + bind);
 }
-
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("frontend/build"));
-}
